@@ -38,9 +38,21 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Render data on page 
 - Allow user to interact with the page
 
-#### PostMVP EXAMPLE
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Image Compiler | H | 8hrs | -- | -- 
+| Adding Search Bar | H | 3hrs| 3.5hrs | 3.5hrs |
+| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Total | H | 14hrs| 5hrs | 5hrs |
 
-- Add localStorage or firebase for storage
+#### PostMVP 
+
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Editable Wallpaper | M | 8hrs | -- | -- |
+| Playlist suggestions | L | 2hrs | -- | -- |
+| Embedded YouTube | L | 4hrs | -- | -- |
+
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
@@ -52,15 +64,21 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | App | This will make the initial data pull and include React Router| 
 | Header | This will render the header include the nav | 
 | Footer | This will render the header include the nav | 
+| Homepage_Wallpaper | Wallpaper sample |
+| Artist Info | The artist search results |
+| Search bar | Input form used to search the api |
+| Image Compiler | Compiles the selected images into a wallpaper |
+| Wallpaper | Final display of the wallpaper |  
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Image Compiler | H | 8hrs | -- | -- 
+| Adding Search Bar | H | 3hrs| 3.5hrs | 3.5hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Total | H | 14hrs| 5hrs | 5hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
