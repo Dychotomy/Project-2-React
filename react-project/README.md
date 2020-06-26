@@ -44,11 +44,12 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | Learn about React-animations | M | 4hr | -- | -- |
 | Image Compiler | H | 6hrs | -- | -- |
 | Grid Component | H | 6hrs | -- | -- |
+| Color Palette | M | 4hrs | -- | -- |
 | Button Component | M | 2hrs | -- | -- |
 | Adding Search Bar | H | 3hrs| 3.5hrs | 3.5hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
 | CSS & Styling | M | 4hrs | -- | -- |
-| Total | H | 30hrs| -- | -- |
+| Total | H | 34hrs| -- | -- |
 
 #### PostMVP 
 
@@ -77,6 +78,8 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Search bar | Input form used to search the api |
 | Image Compiler | Adds the selected album art to the Grid |
 | Grid Component | A component that generates a grided scaffold for album art |
+| Color Palette | A component that assigns solid colors to blank squares |
+| Button | A universal button component | 
 | Wallpaper Display | Final display of the wallpaper |  
 
 
