@@ -2,8 +2,8 @@
 
 ## Project Links
 
-- [https://github.com/Dychotomy/Project-2-React/tree/master/react-project](Github Repo)
-- [add your deployment link]()
+- [https://github.com/Dychotomy/Project-2-React/tree/master/react-project] (Github Repo)
+- [add your deployment link] ( )
 
 ## Project Description
 
@@ -14,7 +14,7 @@ Use this section to describe your final project and perhaps any links to relevan
 Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project. 
 
 
-[https://codesandbox.io/s/project-2-music-api-test-3fihq?file=/src/App.js:228-297]Sandbox test code
+[https://codesandbox.io/s/project-2-music-api-test-3fihq?file=/src/App.js:228-297] (Sandbox test code)
 ```
 {data: {} }
 ```
@@ -24,9 +24,9 @@ Use this section to include info about the API you have chosen and a code snippe
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [https://res.cloudinary.com/dpn6ltns1/image/upload/v1593180165/React%20Project/mobile_wireframe.jpg](Mobile)
-- [https://res.cloudinary.com/dpn6ltns1/image/upload/v1593180172/React%20Project/desktop_wireframe.jpg](Desktop)
-- [https://res.cloudinary.com/dpn6ltns1/image/upload/v1593180178/React%20Project/react%20wireframe.jpg](React)
+- [https://res.cloudinary.com/dpn6ltns1/image/upload/v1593180165/React%20Project/mobile_wireframe.jpg] (Mobile)
+- [https://res.cloudinary.com/dpn6ltns1/image/upload/v1593180172/React%20Project/desktop_wireframe.jpg] (Desktop)
+- [https://res.cloudinary.com/dpn6ltns1/image/upload/v1593180178/React%20Project/react%20wireframe.jpg] (React)
 
 
 ### MVP/PostMVP - 5min
