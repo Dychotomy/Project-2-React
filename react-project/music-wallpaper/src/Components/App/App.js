@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import SearchBar from '../SearchBar/SearchBar'
 import ImageCompiler from '../ImageCompiler/ImageCompiler'
 import Grid from '../Grid/Grid'
@@ -16,23 +16,37 @@ function App() {
       const res = await fetch(musicUrl);
       const json = await res.json();
       setMusic(json);
-      console.log("within App.js -", json);
     };
     makeApiCall();
   }, [artist]);
 
-  const handleSelected = (album) => {
-    console.log('selected album', album)
+
+  // const handleSelected = (art) => {
+  //   console.log('selected album', art)
+  //   const updatedAlbums = [...albums]
+  //   const albumIndex = updatedAlbums.indexOf(art)
+  //   console.log('Index of album', albumIndex)
+  //   if (albumIndex >= 0) {
+  //     updatedAlbums.splice(albumIndex, 1)
+  //     console.log('removing album')
+  //   } else {
+  //     updatedAlbums.push(art)
+  //     console.log('adding album', art)
+  //   }
+  //   setAlbums(updatedAlbums)
+  // }
+
+  const handleSelected = (art) => {
     const updatedAlbums = [...albums]
-    const albumIndex = updatedAlbums.indexOf(album.innertext)
-    console.log('Index of album', albumIndex)
-    if (albumIndex >= 0) {
-      updatedAlbums.splice(albumIndex, 1)
-      console.log('removing album')
-    } else {
-      updatedAlbums.push(album)
-      console.log('adding album',album)
-    }
+    const albumIndex = updatedAlbums.indexOf(art)
+      if (albumIndex >= 0) {
+        updatedAlbums.splice(albumIndex, 1)
+        console.log('removing album')
+      }else {
+        updatedAlbums.push(art)
+        console.log('adding album', art)
+        }
+    console.log('album after .push()', updatedAlbums)
     setAlbums(updatedAlbums)
   }
   
@@ -42,7 +56,7 @@ function App() {
 
   let newMusic = [];
     if (music) {
-        newMusic = music.album;
+        newMusic = (music.album);
     }
 
   return (
