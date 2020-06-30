@@ -19,19 +19,15 @@ function App() {
     };
     makeApiCall();
   }, [artist]);
-console.log(music)
 
   const handleSelected = (art) => {
     const updatedAlbums = [...albums]
     const albumIndex = updatedAlbums.indexOf(art)
       if (albumIndex >= 0) {
         updatedAlbums.splice(albumIndex, 1)
-        console.log('removing album')
       }else {
         updatedAlbums.push(art)
-        console.log('adding album', art)
-        }
-    console.log('album after .push()', updatedAlbums)
+      }
     setAlbums(updatedAlbums)
   }
   
@@ -41,7 +37,7 @@ console.log(music)
 
   let newMusic = [];
     if (music) {
-        newMusic = keyIndex(music.album, 1)
+        newMusic = music.album
     }
 
   return (
@@ -49,7 +45,7 @@ console.log(music)
       <h1>Test the data!</h1>
       <SearchBar handleSubmit={handleSubmit} />
       <ImageCompiler newMusic={newMusic} albums={albums} handleSelected={handleSelected} />
-      <Grid />
+      <Grid albums={albums} />
     </div>
   );
 }

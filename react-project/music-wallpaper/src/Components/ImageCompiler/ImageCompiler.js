@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './ImageCompiler.css'
 
 const ImageCompiler = (props) => {  
@@ -14,15 +14,16 @@ const ImageCompiler = (props) => {
         //add a conditional to remove broken links, you can try to remove them either here or at newMusic
         
         display = props.newMusic.map((album, i) => {
-            
-            return (
-                <img className={`albumCovers ${props.albums.includes(album.strAlbumThumb) ? 'albumSelected' : ''}`} 
-                    src={`${album.strAlbumThumb}`} 
-                    alt={`Album Cover Art ${i}`} 
-                    key={i} 
-                    onClick={handleClick}
-                />
-            )
+            // if (album.strAlbumThumb !== null || album.strAlbumThumb !== '') {
+                return (
+                    <img className={`albumCovers ${props.albums.includes(album.strAlbumThumb) ? 'albumSelected' : ''}`} 
+                        src={`${album.strAlbumThumb}`} 
+                        alt={`Album Cover Art ${i}`} 
+                        key={i} 
+                        onClick={handleClick}
+                    />
+                )
+            // }
         });
     }
 
