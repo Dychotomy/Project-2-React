@@ -10,7 +10,7 @@ function App() {
   const [albums, setAlbums] = useState([])
 
   useEffect(() => {
-    const apiKey = '1'
+    const apiKey = `1`
     const musicUrl = `https://theaudiodb.com/api/v1/json/${apiKey}/searchalbum.php?s=${artist}`
     const makeApiCall = async () => {
       const res = await fetch(musicUrl);
@@ -19,22 +19,7 @@ function App() {
     };
     makeApiCall();
   }, [artist]);
-
-
-  // const handleSelected = (art) => {
-  //   console.log('selected album', art)
-  //   const updatedAlbums = [...albums]
-  //   const albumIndex = updatedAlbums.indexOf(art)
-  //   console.log('Index of album', albumIndex)
-  //   if (albumIndex >= 0) {
-  //     updatedAlbums.splice(albumIndex, 1)
-  //     console.log('removing album')
-  //   } else {
-  //     updatedAlbums.push(art)
-  //     console.log('adding album', art)
-  //   }
-  //   setAlbums(updatedAlbums)
-  // }
+console.log(music)
 
   const handleSelected = (art) => {
     const updatedAlbums = [...albums]
@@ -56,7 +41,7 @@ function App() {
 
   let newMusic = [];
     if (music) {
-        newMusic = (music.album);
+        newMusic = keyIndex(music.album, 1)
     }
 
   return (
