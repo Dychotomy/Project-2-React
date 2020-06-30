@@ -1,5 +1,6 @@
 import React from 'react'
 import Masonry from 'react-masonry-css'
+import domtoimage from 'dom-to-image'
 import './Grid.css'
 
 const Grid = (props) => {
@@ -23,13 +24,24 @@ const Grid = (props) => {
     // }
 
     // console.log(normalizedAlbums(props.albums))
+    const handleClick = () => {
+        domtoimage.toJpeg(document.getElementById('grid'), { quality: 0.95 })
+        .then(function (dataUrl) {
+            let link = document.createElement('a');
+            link.download = 'wallpaper.jpeg';
+            link.href = dataUrl;
+            link.click()
+        });
+    }
 
     return (
         <>
-        <div>Scaffold</div>
+        <button onClick={handleClick}>Scaffold</button>
+        <div id='test'></div>
         <Masonry
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
+            id="grid"
             columnClassName="my-masonry-grid_column">
             {wallpaper}    
             {/* {<img src={props.albums[0]} alt='' />}
