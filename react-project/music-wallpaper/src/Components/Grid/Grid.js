@@ -16,17 +16,12 @@ const Grid = (props) => {
             <img src={`${album}`} alt={`Album Cover Art ${i}`} />
         )
     });
+    
 
-    // const normalizedAlbums = (arr) => {
-    //     if(props.arr){
-    //     let newArray = props.arr}
-    //     return newArray
-    // }
-
-    // console.log(normalizedAlbums(props.albums))
+    
     const handleClick = () => {
         domtoimage.toJpeg(document.getElementById('grid'), { quality: 0.95 })
-        .then(function (dataUrl) {
+        .then(dataUrl => {
             let link = document.createElement('a');
             link.download = 'wallpaper.jpeg';
             link.href = dataUrl;

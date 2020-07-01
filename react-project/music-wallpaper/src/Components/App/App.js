@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Header from '../Header/Header'
 import SearchBar from '../SearchBar/SearchBar'
 import ImageCompiler from '../ImageCompiler/ImageCompiler'
 import Grid from '../Grid/Grid'
@@ -42,7 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Test the data!</h1>
+      <Header />
       <SearchBar handleSubmit={handleSubmit} />
       <ImageCompiler newMusic={newMusic} albums={albums} handleSelected={handleSelected} />
       <Grid albums={albums} />
