@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './SearchBar.css'
 
 const SearchBar = (props) => {
@@ -7,7 +9,7 @@ const SearchBar = (props) => {
         const userInput = e.target.value
         setInput(userInput)
     }
-    const handleSubmit = e => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         props.handleSubmit(input)
         setInput('')
@@ -16,12 +18,14 @@ const SearchBar = (props) => {
         <div className='searchbar'>
             <form onSubmit={handleSubmit}>
                 <input 
+                    className='input'
                     type='text'
                     placeholder='Enter artist name'
                     onChange={handleChange}
                     value={input}
+                    required
                 />
-                <button>Search</button>
+                <button className='button'><FontAwesomeIcon icon={faSearch} className='icon'/></button>
             </form>
         </div>
     )

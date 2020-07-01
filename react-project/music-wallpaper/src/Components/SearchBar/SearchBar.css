@@ -1,4 +1,33 @@
 .searchbar {
     margin: 10px;
     padding: 10px;
+    font-family: 'Piedra', cursive;
 }
+
+.input {
+    border-right: none;
+    border-top: 2px solid #855d05;
+    border-bottom: 2px solid #855d05;
+    border-left: 2px solid #855d05;
+    border-radius: 10px 0 0 10px;
+    padding-left: 1em;
+    background-color: #FBE36E;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.button {
+    border-left: none;
+    border-top: 2px solid #855d05;
+    border-bottom: 2px solid #855d05;
+    border-right: 2px solid #855d05;
+    border-radius: 0 10px 10px 0;
+    background-color: #FBE36E;
+}
+
+.icon {
+    color: #855d05;
+}
+

@@ -11,19 +11,18 @@ const ImageCompiler = (props) => {
     if (props.newMusic === null) {
         display = (<h1>Artist not found</h1>)  
     } else {
-        if (props.newMusic.strAlbumThumb !== null && props.newMusic.strAlbumThumb !== '') {
-        display = props.newMusic.map((album, i) => 
-            (
-                <img className={`albumCovers ${props.albums.includes(album.strAlbumThumb) ? 'albumSelected' : ''}`} 
-                    src={`${album.strAlbumThumb}`} 
-                    alt={`Album Cover Art ${i}`} 
-                    key={i} 
-                    onClick={handleClick}
-                />
-            )
-            
-            );
-        }
+        display = props.newMusic.map((album, i) => {
+            if (album.strAlbumThumb !== null && album.strAlbumThumb !== '') {
+                return (
+                    <img className={`albumCovers ${props.albums.includes(album.strAlbumThumb) ? 'albumSelected' : ''}`} 
+                        src={`${album.strAlbumThumb}`} 
+                        alt={`Album Cover Art ${i}`} 
+                        key={i} 
+                        onClick={handleClick}
+                    />
+                )
+            }
+        });
     }
 
     return (
