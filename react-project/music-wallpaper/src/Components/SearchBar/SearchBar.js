@@ -15,7 +15,7 @@ const SearchBar = (props) => {
         setInput('')
     }
     return(
-        <div className='searchbar'>
+        <div id='searchbar'>
             <form onSubmit={handleSubmit}>
                 <input 
                     className='input'

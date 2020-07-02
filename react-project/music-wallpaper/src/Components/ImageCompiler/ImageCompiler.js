@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMusic } from '@fortawesome/free-solid-svg-icons'
 import './ImageCompiler.css'
 
 const ImageCompiler = (props) => {  
@@ -9,7 +11,7 @@ const ImageCompiler = (props) => {
     }
 
     if (props.newMusic === null) {
-        display = (<h1>Artist not found</h1>)  
+        display = (<h1 className='music'><FontAwesomeIcon icon={faMusic} className='icon'/></h1>)  
     } else {
         display = props.newMusic.map((album, i) => {
             if (album.strAlbumThumb !== null && album.strAlbumThumb !== '') {

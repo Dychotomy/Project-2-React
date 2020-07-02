@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Route, Link, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
 import SearchBar from '../SearchBar/SearchBar'
 import ImageCompiler from '../ImageCompiler/ImageCompiler'
@@ -7,7 +8,7 @@ import './App.css';
 
 function App() {
   const [music, setMusic] = useState()
-  const [artist, setArtist] = useState('dave matthews band')
+  const [artist, setArtist] = useState('')
   const [albums, setAlbums] = useState([])
 
   useEffect(() => {
@@ -44,9 +45,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchBar handleSubmit={handleSubmit} />
+      <Route path='/home'
+        render={routerProps => <SearchBar{...routerProps}
+        handleSubmit={handleSubmit}/>}
+      />
       <ImageCompiler newMusic={newMusic} albums={albums} handleSelected={handleSelected} />
-      <Grid albums={albums} />
+      <Switch>
+      <Route path='/grid'
+        render={routerProps => <Grid{...routerProps}
+        albums={albums}/>}
+      />
+      </Switch>
     </div>
   );
 }

@@ -12,7 +12,8 @@
     align-items: baseline;
     border-bottom: 2px solid #855D05;
     font-family: 'Piedra', cursive;
-    
 }
 
-/* https://res.cloudinary.com/dpn6ltns1/image/upload/v1593569569/React%20Project/malte-wingen-PDX_a_82obo-unsplash_hyebcg.jpg */
+.links {
+    color: #3a2c16
+}
