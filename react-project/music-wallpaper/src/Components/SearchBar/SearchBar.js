@@ -27,9 +27,15 @@ const SearchBar = (props) => {
                     value={input}
                     required
                 />
-                <button className='button'><FontAwesomeIcon icon={faSearch} className='icon'/></button>
+                <button className='searchIcon'>
+                    <FontAwesomeIcon icon={faSearch} className='icon'/>
+                </button>
             </form>
-            <ImageCompiler newMusic={props.newMusic} albums={props.albums} handleSelected={props.handleSelected} />
+            <ImageCompiler 
+                newMusic={props.newMusic} 
+                albums={props.albums} 
+                handleSelected={props.handleSelected} 
+            />
         </div>
     )
 }

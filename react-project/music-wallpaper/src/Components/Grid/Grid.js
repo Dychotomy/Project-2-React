@@ -1,5 +1,6 @@
 import React from 'react'
 import domtoimage from 'dom-to-image'
+import { Link } from 'react-router-dom'
 import './Grid.css'
 
 const Grid = (props) => {
@@ -18,7 +19,6 @@ const Grid = (props) => {
                     <div className={`grid-item span-2 grid-item-${i}`}>
                     <img src={`${album}`} 
                     alt={`Album Cover Art ${i}`} 
-                    
                     />
                     </div>
                 )
@@ -27,40 +27,12 @@ const Grid = (props) => {
                     <div className={`grid-item grid-item-${i}`}>
                     <img src={`${album}`} 
                     alt={`Album Cover Art ${i}`} 
-                    
                     />
                     </div>
                 )
             }
     });
 
-    // let wallpaper = props.albums.map((album, i) => {
-    //     return (
-    //         <img src={`${album}`} alt={`Album Cover Art ${i}`} />
-    //     )
-    // })
-    
-    // const wallpaperGrid = (props.albums) => {
-    //     for (i = 0; i < props.albums.length; i++) {
-    //         if (i %= 2 === 0) {
-    //             <img src={`${album}`} 
-    //             alt={`Album Cover Art ${i}`} 
-    //             className={`grid-item span-2 grid-item-${i}`}
-    //             />
-    //         } else if (i %= 3 === 0) {
-    //             <img src={`${album}`} 
-    //             alt={`Album Cover Art ${i}`} 
-    //             className={`grid-item span-3 grid-item-${i}`}
-    //             />
-    //         } else {
-    //             <img src={`${album}`} 
-    //             alt={`Album Cover Art ${i}`} 
-    //             className={`grid-item grid-item-${i}`}
-    //             />
-    //         }
-    //     } 
-    // }
-    
     const handleClick = () => {
         domtoimage.toJpeg(document.getElementById('grid'), { quality: 0.95 })
         .then(dataUrl => {
@@ -73,7 +45,10 @@ const Grid = (props) => {
 
     return (
         <>
-        <button onClick={handleClick}>Scaffold</button>
+        <Link to='/home'> 
+            <button className='gridButtonLeft'>Back</button>
+        </Link>
+        <button className='gridButtonRight' onClick={handleClick}>Download</button>
         <div class="grid-layout" id='grid'>
             {wallpaper}
         </div>

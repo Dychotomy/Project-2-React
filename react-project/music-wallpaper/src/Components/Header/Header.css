@@ -6,7 +6,6 @@
     background-repeat: no-repeat;
     height: auto;
     width: auto;
-    color: #3A2C16;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -14,8 +13,12 @@
     font-family: 'Piedra', cursive;
 }
 
+.title {
+    color: #3A2C16;
+}
+
 .links {
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     color: #3a2c16
 }

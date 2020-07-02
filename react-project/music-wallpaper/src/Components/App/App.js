@@ -53,7 +53,6 @@ function App() {
         newMusic={newMusic}
         albums={albums}/>}
       />
-      
       <Route path='/grid'
         render={routerProps => <Grid{...routerProps}
         albums={albums}/>}

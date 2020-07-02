@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMusic } from '@fortawesome/free-solid-svg-icons'
 import './ImageCompiler.css'
@@ -26,11 +27,15 @@ const ImageCompiler = (props) => {
             }
             return null
         });
+        
     }
 
     return (
         <div className='search-results'>
-        {display}
+            <div className='spacer'>
+                <Link to='/grid'><button className='wallpaperButton'>See Wallpaper</button></Link>
+            </div>
+            {display}
         </div>
     )
 }

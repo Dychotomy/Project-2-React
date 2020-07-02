@@ -13,7 +13,22 @@
   margin-top: 25vh;
   font-size: 100px;
   color: #3A2C16;
-  animation: rotation 2s infinite linear;
+  animation: rotation 3s infinite linear;
+}
+
+.spacer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.wallpaperButton {
+  margin: 10px;
+  padding: 5px;
+  color: #757575;
+  border: 2px solid #855d05;
+  border-radius: 10px;
+  background-color: #FBE36E;
 }
 
 @keyframes rotation {
@@ -21,6 +36,6 @@
     transform: rotateY(0deg);
   }
   to {
-    transform: rotateY(359deg);
+    transform: rotateY(360deg);
   }
 }
