@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import ImageCompiler from '../ImageCompiler/ImageCompiler'
 import './SearchBar.css'
 
 const SearchBar = (props) => {
@@ -14,6 +15,7 @@ const SearchBar = (props) => {
         props.handleSubmit(input)
         setInput('')
     }
+
     return(
         <div id='searchbar'>
             <form onSubmit={handleSubmit}>
@@ -27,6 +29,7 @@ const SearchBar = (props) => {
                 />
                 <button className='button'><FontAwesomeIcon icon={faSearch} className='icon'/></button>
             </form>
+            <ImageCompiler newMusic={props.newMusic} albums={props.albums} handleSelected={props.handleSelected} />
         </div>
     )
 }

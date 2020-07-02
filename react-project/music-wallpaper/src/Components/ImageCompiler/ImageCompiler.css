@@ -12,4 +12,15 @@
 .music {
   margin-top: 25vh;
   font-size: 100px;
+  color: #3A2C16;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Link, Switch, Redirect } from 'react-router-dom'
 import Header from '../Header/Header'
 import SearchBar from '../SearchBar/SearchBar'
-import ImageCompiler from '../ImageCompiler/ImageCompiler'
+
 import Grid from '../Grid/Grid'
 import './App.css';
 
@@ -45,16 +45,20 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Switch>
       <Route path='/home'
         render={routerProps => <SearchBar{...routerProps}
-        handleSubmit={handleSubmit}/>}
+        handleSubmit={handleSubmit}
+        handleSelected={handleSelected}
+        newMusic={newMusic}
+        albums={albums}/>}
       />
-      <ImageCompiler newMusic={newMusic} albums={albums} handleSelected={handleSelected} />
-      <Switch>
+      
       <Route path='/grid'
         render={routerProps => <Grid{...routerProps}
         albums={albums}/>}
       />
+      <Route path="*" render={() => <Redirect to='/home' />} />
       </Switch>
     </div>
   );

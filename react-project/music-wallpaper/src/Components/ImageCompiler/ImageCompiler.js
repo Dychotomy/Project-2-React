@@ -24,6 +24,7 @@ const ImageCompiler = (props) => {
                     />
                 )
             }
+            return null
         });
     }
 

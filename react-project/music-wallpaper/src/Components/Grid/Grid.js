@@ -7,24 +7,29 @@ const Grid = (props) => {
     let wallpaper = props.albums.map((album, i) => {
             if (i % 3 === 0) {
                 return (
-                    <img src={`${album}`} 
-                    alt={`Album Cover Art ${i}`} 
-                    className={`grid-item span-3 grid-item-${i}`}
-                    />
+                    <div className={`grid-item span-3 grid-item-${i}`}>
+                        <img src={`${album}`} 
+                            alt={`Album Cover Art ${i}`} 
+                        />
+                    </div>
                 )
             } else if (i % 2 === 0) {
                 return (
+                    <div className={`grid-item span-2 grid-item-${i}`}>
                     <img src={`${album}`} 
                     alt={`Album Cover Art ${i}`} 
-                    className={`grid-item span-2 grid-item-${i}`}
+                    
                     />
+                    </div>
                 )
             } else {
                 return (
+                    <div className={`grid-item grid-item-${i}`}>
                     <img src={`${album}`} 
                     alt={`Album Cover Art ${i}`} 
-                    className={`grid-item grid-item-${i}`}
+                    
                     />
+                    </div>
                 )
             }
     });
@@ -69,7 +74,7 @@ const Grid = (props) => {
     return (
         <>
         <button onClick={handleClick}>Scaffold</button>
-        <div class="grid-layout">
+        <div class="grid-layout" id='grid'>
             {wallpaper}
         </div>
         </>
