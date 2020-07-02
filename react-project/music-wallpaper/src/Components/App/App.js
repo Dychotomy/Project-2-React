@@ -13,7 +13,7 @@ function App() {
   const [albums, setAlbums] = useState([])
 
   useEffect(() => {
-    const apiKey = `1`
+    const apiKey = process.env.React_APP_KEY
     const musicUrl = `https://theaudiodb.com/api/v1/json/${apiKey}/searchalbum.php?s=${artist}`
     const makeApiCall = async () => {
       const res = await fetch(musicUrl);
