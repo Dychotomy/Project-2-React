@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Route, Link, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Header from '../Header/Header'
 import SearchBar from '../SearchBar/SearchBar'
 
 import Grid from '../Grid/Grid'
 import './App.css';
+import Instructions from '../Instructions/Instructions'
 
 function App() {
   const [music, setMusic] = useState()
@@ -53,11 +54,14 @@ function App() {
         newMusic={newMusic}
         albums={albums}/>}
       />
+      <Route path='/instructions' component={Instructions} />
       <Route path='/grid'
         render={routerProps => <Grid{...routerProps}
         albums={albums}/>}
       />
-      <Route path="*" render={() => <Redirect to='/home' />} />
+      <Route path="*" 
+        render={() => <Redirect to='/home' />} 
+      />
       </Switch>
     </div>
   );

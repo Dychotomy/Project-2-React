@@ -1,0 +1,15 @@
+.instructions {
+    margin-top: 50px;
+    color: #3A2C16;
+    font-family: 'Piedra', cursive;
+}
+
+p {
+    padding: 5px;
+    color: #3A2C16;
+    font-family: 'Philosopher', sans-serif; 
+}
+
+span {
+    font-weight: bold;
+}

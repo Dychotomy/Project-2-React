@@ -18,12 +18,12 @@
 
 .spacer {
   display: flex;
-  justify-content: center;
   width: 100vw;
+  justify-content: center;
 }
 
 .wallpaperButton {
-  margin: 10px;
+  margin: 15px;
   padding: 5px;
   color: #757575;
   border: 2px solid #855d05;
