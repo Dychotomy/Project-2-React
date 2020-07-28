@@ -91,20 +91,42 @@
 # p nums.select { |i| i % 5 == 0 }
 
 
-# COLOR ARRAY
+# # COLOR ARRAY
 
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+# colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 
-# 1. Print out a random color.
+# # 1. Print out a random color.
 
-p colors.sample
+# p colors.sample
 
-# 2. Print out the colors array in reverse order.
+# # 2. Print out the colors array in reverse order.
 
-p colors.reverse
+# p colors.reverse
 
-# 3. Print out all of the colors in the array with all capital letters.
-capitalized_colors = []
-colors.each { |i| capitalized_colors << i.capitalize }
-p capitalized_colors
+# # 3. Print out all of the colors in the array with all capital letters.
+# capitalized_colors = []
+# colors.each { |i| capitalized_colors << i.capitalize }
+# p capitalized_colors
 
+
+# METHODS
+
+# Write a method named find_area that finds the area of a rectangle when given values for width and height
+
+def find_area height, width
+    area = height * width
+    puts "The area of this rectangle is #{area}."
+end
+
+find_area 5, 5
+
+# Write a method named multiply_each_by_five that will loop over the given nums array below and print each number multiplied by 5
+
+nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
+
+def multiply_each_by_five arr
+    arr.each { |i| print "#{i * 5} "}
+    puts ""
+end
+
+multiply_each_by_five nums
